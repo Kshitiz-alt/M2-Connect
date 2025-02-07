@@ -40,7 +40,7 @@ const HomePage = () => {
     const InView = useInView(ref)
 
     return (
-        <div className="bg-[url(background.png)] bg-cover bg-fixed h-[219vh] " ref={ref}>
+        <div className="bg-[url(/background.png)] bg-cover bg-fixed h-[219vh] " ref={ref}>
             <motion.nav
                 variants={Animation}
                 initial="initial"
