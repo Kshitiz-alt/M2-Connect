@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+    width: 6px; /* Adjust scrollbar width */
+    height: 6px; /* Adjust scrollbar height for horizontal scrolling */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #888; /* Scrollbar color */
+    border-radius: 10px; /* Rounded edges */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker color on hover */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the scrollbar track */
+    border-radius: 10px;
+}
