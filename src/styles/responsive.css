@@ -1,0 +1,97 @@
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url(/public/background.png);
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .logo {
+    margin-left: 55px;
+    width: 90%;
+  }
+
+  .logo1 {
+    border-radius: 300px; 
+    width: 20% !important;
+  }
+
+  .searchbar {
+    gap: 15px;
+    padding: 15px;
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+  }
+
+  .searchbar .form-control {
+    width: 100%;
+  }
+
+  .searchbar .btn {
+    width: 100%;
+  }
+
+  .aboutme {
+    margin-left: 75px;
+  }
+  .button2 .primary-btn {
+    width: 70%;
+  }
+
+  .searchbar {
+    width: 74.5%;
+    padding: 10px;
+  }
+
+  .searchbar .btn {
+    width: 20%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+
+  .logo {
+    margin-left: 55px;
+    width: 90%;
+  }
+  body{
+    background-attachment: fixed;
+  }
+
+  .logo1 {
+    border-radius: 350px; 
+    width: 15%;
+  }
+
+  .button2 .primary-btn {
+    width: 81%;
+  }
+
+  .searchbar {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .searchbar .btn {
+    font-size: 14px;
+
+    .searchbar {
+      flex-direction: column;
+      /* Stack input and button vertically */
+      gap: 15px;
+      /* Add more space between input and button */
+      padding: 15px;
+    }
+
+    .searchbar .form-control {
+      width: 100%;
+      /* Make the input take the full width */
+    }
+
+    .searchbar .btn {
+      width: 100%;
+
+    }
+  }
+}

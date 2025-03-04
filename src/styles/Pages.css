@@ -1,0 +1,159 @@
+.LatestBW {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+.HS {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+.LPunjabi {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+.Anime {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+
+  .Tracks1 {
+    display: contents;
+  }
+
+  .Tracks img {
+    width: 20%;
+  }
+
+  .Tracks audio {
+    width: 20%;
+  }
+}
+
+.NewDJ {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+.NewRT {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+.TopS {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+
+.IP {
+  background-image: url(/public/LatestBW.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 300vh;
+  box-shadow: 0 0 12px 20px black;
+}
+
+.Mainpage {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  border-radius: 40px;
+
+  &:hover {
+
+    &:after {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+
+    &:before {
+      opacity: 0;
+      transform: translateY(50%) rotateX(90deg);
+    }
+  }
+
+  &:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #323237;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    background: #adadaf;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+    border-radius: 40px;
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #adadaf;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: 0.5;
+    position: relative;
+    background: #323237;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+    border-radius: 40px;
+  }
+}
+
+.Navbar {
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  width: 100%;
+  padding-left: 35px;
+  gap: 20rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  .d-flex {
+    .form-control {
+      width: 30rem;
+      padding: 8px;
+      border-radius: 30px;
+    }
+
+    .btn-search {
+      font-size: 18px;
+      border-radius: 5px;
+    }
+  }
+
+}

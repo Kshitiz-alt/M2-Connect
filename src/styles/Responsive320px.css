@@ -1,0 +1,136 @@
+@media screen and (max-width: 320px) {
+    body{
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter:blur(2px);
+    }
+
+
+
+    .logo{
+        .logo1{
+            width: 32% !important;
+            margin-left: -35px;
+
+        }
+        .aaloo{
+            font-size: 18px;
+
+        }
+    }
+    .buttons{
+        margin-left: 10px !important;
+        .btn-primary{
+
+        }
+    }
+    .searchbar{
+        margin: 0px 10px;
+        width: 94%;
+        .btn{
+            font-size: 10px;
+            width: 25%;
+        }
+    }
+    .content{
+        box-shadow: 0 0 30px 20px black;
+        .heading{
+            font-size: 24px;
+            margin-left: 45px;
+
+        }
+        .aboutme{
+            font-size: 16px;
+            padding-top: 1rem;
+            margin-left: 38px;
+        }
+    }
+    .LatestBW{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .IP{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .LPunjabi{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .NewRT{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .TopS{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .HS{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .Anime{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+    .NewDJ{
+        background-image: url(/public/LatestBW.jpg);
+        .Navbar{
+            .Mainpage{
+                font-size: 10px;
+            }
+            .d-flex{
+                display: none;
+            }
+        }
+    }
+
+}
