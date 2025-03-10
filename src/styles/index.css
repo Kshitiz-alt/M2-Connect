@@ -6,16 +6,25 @@
   box-sizing: border-box;
 }
 
-body {
+body, html {
   font-family: Baskerville Old Face;
   align-items: center;
   justify-content: center;
   height: 500px;
   background-image: url(/public/background.png);
-  /* background:repeating-radial-gradient(circle, rgb(255, 255, 255) ,rgb(1, 1, 1)); */
   background-size: cover;  
-  /* -webkit-backdrop-filter: blur(1px);
-  backdrop-filter: blur(10px); */
+  scroll-behavior: smooth;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    ::-webkit-scrollbar{
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track{
+        background: white;
+    }
+    ::-webkit-scrollbar-thumb{
+        background: gray;
+        border-radius: 10px;
+    }
 }
 
 @layer utilities{
