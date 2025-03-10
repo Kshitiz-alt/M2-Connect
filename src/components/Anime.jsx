@@ -50,9 +50,9 @@ export default function Anime() {
     <div className="Anime">
       <nav className="">
         <div className="">
-        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="Front"></a>
+          <a onClick={() => navigate('/About')} className="btn-flip" data-back="Back" data-front="Anime"></a>
           <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
-            <input  
+            <input
               className="rounded-[20px] h-[30px] w-full p-[3px]!"
               type="search"
               placeholder="Search"
@@ -65,16 +65,18 @@ export default function Anime() {
       </nav>
 
       {loading && <div className="">Loading...</div>}
-      
+
 
       {/* Displaying Searched Albums */}
       <div className="">
-        <div className="flex overflow-x-scroll">
+        <div className="flex gap-[5em] overflow-x-scroll">
           {albums?.map((album) => (
-            <div key={album.id} className="flex overflow-y-clip justify-center items-center text-white gap-[3em] h-[90vh]">
-              <img className="ImageGuards p-[20px] left-[5em]" src={album.image[2].url} alt={`Cover for ${album.name}`} />
+            <div key={album.id} className="flex flex-col justify-center items-center text-white gap-[3em] h-[90vh]">
+              <img className="ImageGuards" src={album.image[2].url} alt={`Cover for ${album.name}`} />
               <div>
-                <span className="text-white">{album.artists.featured?.name || "Unknown Artist"}</span>
+                <p className="text-white text-center">{album.artists.all[0].name}</p>
+                <audio controls src={album.downloadUrl[4].url}></audio>
+
               </div>
             </div>
           ))}
@@ -88,7 +90,7 @@ export default function Anime() {
             <img className="ImageGuards" src={playlist.image[2].url} alt={playlist.name} />
             <div>
               <p className="text-white text-center">{playlist.artists.all[0].name}</p>
-              
+
               <audio controls src={playlist.downloadUrl[4].url}></audio>
             </div>
           </div>
