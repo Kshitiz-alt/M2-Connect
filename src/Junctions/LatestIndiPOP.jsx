@@ -15,7 +15,7 @@ export default function Anime() {
   const getPlaylists = async () => {
     setLoading(true)
     try {
-      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=bollywood&limit=50")
+      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=indipop&limit=50")
       const { data } = TopSongs.data
       setPlaylists(data.results)
       console.log(data.results)
@@ -47,10 +47,11 @@ export default function Anime() {
   };
 
   return (
-    <div className="LatestBW">
-      <nav className="">
+    <div className="pages">
+      <nav className="bg-body-tertiary">
         <div className="">
-        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="bollywood"></a>
+        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="indipop"></a>
+          
           <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
             <input
               className="rounded-[20px] h-[30px] w-full p-[3px]!"
@@ -59,13 +60,13 @@ export default function Anime() {
               aria-label="Search"
               onChange={(e) => setQuery(e.target.value)}
             />
-            <button className="btn-search relative right-[3em]" type="submit">Search</button>
+            <button className="relative right-[3em]" type="submit">Search</button>
           </form>
         </div>
       </nav>
 
       {loading && <div className="">Loading...</div>}
-
+    
 
       {/* Displaying Searched Albums */}
       <div className="">
@@ -76,7 +77,6 @@ export default function Anime() {
               <div>
                 <p className="text-white">{album.artists.all[0].name}</p>
                 <audio controls src={album.downloadUrl[4].url}></audio>
-
               </div>
             </div>
           ))}
@@ -90,7 +90,7 @@ export default function Anime() {
             <img className="ImageGuards" src={playlist.image[2].url} alt={playlist.name} />
             <div>
               <p className="text-white text-center">{playlist.artists.all[0].name}</p>
-
+              
               <audio controls src={playlist.downloadUrl[4].url}></audio>
             </div>
           </div>

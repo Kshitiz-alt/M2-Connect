@@ -1,5 +1,5 @@
-import axios from 'axios'
-import { useState, useEffect } from 'react'
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom'
 import '../styles/Pages.css';
 
@@ -15,7 +15,7 @@ export default function Anime() {
   const getPlaylists = async () => {
     setLoading(true)
     try {
-      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=haryanvi&limit=50")
+      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=dj&limit=50")
       const { data } = TopSongs.data
       setPlaylists(data.results)
       console.log(data.results)
@@ -47,10 +47,11 @@ export default function Anime() {
   };
 
   return (
-    <div className="HS">
-      <nav className="">
+    <div className="pages">
+      <nav className="bg-body-tertiary">
         <div className="">
-        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="haryanvi"></a>
+        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="Dj-remix"></a>
+          
           <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
             <input
               className="rounded-[20px] h-[30px] w-full p-[3px]!"
@@ -71,7 +72,7 @@ export default function Anime() {
       <div className="">
         <div className="flex gap-[5em] overflow-x-scroll">
           {albums?.map((album) => (
-            <div key={album.id} className="flex flex-col justify-center items-center text-white gap-[3em] h-[90vh]">
+            <div key={album.id} className="flex overflow-y-clip justify-center items-center text-white gap-[3em] h-[90vh]">
               <img className="ImageGuards" src={album.image[2].url} alt={`Cover for ${album.name}`} />
               <div>
                 <p className="text-white">{album.artists.all[0].name}</p>

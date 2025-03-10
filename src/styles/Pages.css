@@ -1,68 +1,10 @@
-.LatestBW {
+.pages {
   background-image: url(/public/LatestBW.jpg);
   background-attachment: fixed;
   background-size: cover;
-  height: 700vh;
+  height: 1000vh;
   box-shadow: 0 0 12px 20px black;
 }
-
-.HS {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
-.LPunjabi {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
-.Anime {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
-.NewDJ {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
-.NewRT {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
-.TopS {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
-
-.IP {
-  background-image: url(/public/LatestBW.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  height: 700vh;
-  box-shadow: 0 0 12px 20px black;
-}
-
 .btn-flip {
   opacity: 1;
   outline: 0;

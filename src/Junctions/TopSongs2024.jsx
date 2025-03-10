@@ -47,7 +47,7 @@ export default function Anime() {
   };
 
   return (
-    <div className="TopS">
+    <div className="pages">
       <nav className="bg-body-tertiary">
         <div className="">
         <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="top songs"></a>
