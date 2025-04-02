@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'
-import '../styles/Pages.css';
+import { useNavigate } from 'react-router-dom';
+import '../../styles/Pages.css';
 
 export default function Anime() {
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ export default function Anime() {
   const getPlaylists = async () => {
     setLoading(true)
     try {
-      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=dj&limit=50")
+      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=indipop&limit=50")
       const { data } = TopSongs.data
       setPlaylists(data.results)
       console.log(data.results)
@@ -50,7 +50,7 @@ export default function Anime() {
     <div className="pages">
       <nav className="bg-body-tertiary">
         <div className="">
-        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="Dj-remix"></a>
+        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="indipop"></a>
           
           <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
             <input
@@ -66,7 +66,7 @@ export default function Anime() {
       </nav>
 
       {loading && <div className="">Loading...</div>}
-      
+    
 
       {/* Displaying Searched Albums */}
       <div className="">

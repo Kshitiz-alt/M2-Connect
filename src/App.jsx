@@ -3,24 +3,22 @@ import { Navigate } from 'react-router-dom'
 
 
 
-import Mainpage from './junctions/Mainpage';
-import LatestBollywood from './junctions/LatestBollywood';
-
-import LatestPunjabi from './junctions/LatestPunjabi';
-import LatestIndiPOP from './junctions/LatestIndiPOP';
-import TopSongs2024 from './junctions/TopSongs2024';
-import HaryanviSongs from './junctions/HaryanviSongs';
-import NewRingTones from './junctions/NewRingTones';
-import NewDJRemix from './junctions/NewDJRemix';
-
-import MainLogin from './junctions/MainLogin';
-import Anime from './junctions/Anime';
-
+import Mainpage from './components/junctions/Mainpage';
+import LatestBollywood from './components/junctions/LatestBollywood';
+import LatestPunjabi from './components/junctions/LatestPunjabi';
+import LatestIndiPOP from './components/junctions/LatestIndiPOP';
+import TopSongs2024 from './components/junctions/TopSongs2024';
+import HaryanviSongs from './components/junctions/HaryanviSongs';
+import NewRingTones from './components/junctions/NewRingTones';
+import NewDJRemix from './components/junctions/NewDJRemix';
+import Anime from './components/junctions/Anime';
+import Login from './Components/Login/Login'
 
 function App() {
 
   return (
     <>
+    {/* <Login/> */}
       <BrowserRouter>
         <Routes>
           <Route path="/About" element={<Mainpage/>}/>
@@ -32,7 +30,6 @@ function App() {
           <Route path="/HaryanviSongs" element={<HaryanviSongs/>}/>
           <Route path="/NewRingTones" element={<NewRingTones/>}/>
           <Route path="/NewDJRemix" element={<NewDJRemix/>}/>
-          {/* <Route path="/Login" element={<MainLogin/>}/> */}
           <Route path="*" element={<Navigate to ="About"/>}/>
         </Routes>
       </BrowserRouter>

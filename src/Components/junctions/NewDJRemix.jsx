@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../styles/Pages.css';
+import { useNavigate } from 'react-router-dom'
+import '../../styles/Pages.css';
 
 export default function Anime() {
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ export default function Anime() {
   const getPlaylists = async () => {
     setLoading(true)
     try {
-      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=punjabi&limit=50")
+      const TopSongs = await axios.get("https://saavn.dev/api/search/songs?query=dj&limit=50")
       const { data } = TopSongs.data
       setPlaylists(data.results)
       console.log(data.results)
@@ -50,7 +50,7 @@ export default function Anime() {
     <div className="pages">
       <nav className="bg-body-tertiary">
         <div className="">
-        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="punjabi"></a>
+        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="Dj-remix"></a>
           
           <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
             <input
@@ -65,7 +65,7 @@ export default function Anime() {
         </div>
       </nav>
 
-      {loading && <div className="spinner">Loading...</div>}
+      {loading && <div className="">Loading...</div>}
       
 
       {/* Displaying Searched Albums */}
@@ -77,7 +77,6 @@ export default function Anime() {
               <div>
                 <p className="text-white">{album.artists.all[0].name}</p>
                 <audio controls src={album.downloadUrl[4].url}></audio>
-
               </div>
             </div>
           ))}
@@ -85,7 +84,7 @@ export default function Anime() {
       </div>
 
       {/* Displaying Playlist Songs */}
-      <div className="grid grid-cols-4 gap-[5em]">
+      <div className="grid grid-cols-4  gap-[5em]">
         {playlists?.map((playlist) => (
           <div className="flex flex-col p-[30px]! justify-center items-center" key={playlist.id}>
             <img className="ImageGuards" src={playlist.image[2].url} alt={playlist.name} />

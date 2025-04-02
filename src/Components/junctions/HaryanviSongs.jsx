@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../styles/Pages.css';
+import '../../styles/Pages.css';
 
 export default function Anime() {
   const [loading, setLoading] = useState(false);
