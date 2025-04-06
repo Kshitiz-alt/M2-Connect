@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { PiArrowSquareUpLight } from 'react-icons/pi'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/Pages.css';
@@ -6,7 +7,6 @@ import '../../styles/Pages.css';
 export default function Anime() {
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
-  // const [error, setError] = useState(null);
   const [albums, setAlbums] = useState([]);
   const [playlists, setPlaylists] = useState([]);
   const navigate = useNavigate();
@@ -48,31 +48,30 @@ export default function Anime() {
 
   return (
     <div className="pages">
-      <nav className="bg-body-tertiary">
-        <div className="">
-        <a onClick={()=>navigate('/About')} className="btn-flip" data-back="Back" data-front="punjabi"></a>
-          
-          <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
-            <input
-              className="rounded-[20px] h-[30px] w-full p-[3px]!"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              onChange={(e) => setQuery(e.target.value)}
-            />
-            <button className="relative right-[3em]" type="submit">Search</button>
-          </form>
-        </div>
+      <nav id="back" className="flex items-center gap-[20em]">
+
+        <a onClick={() => navigate('/About')} className="btn-flip" data-back="Back" data-front="punjabi"></a>
+
+        <form className="flex w-[30%] h-[30px] justify-self-center items-center bg-white rounded-[20px] p-[10px]" onSubmit={handleSearch} role="search">
+          <input
+            className="rounded-[20px] h-[30px] w-full p-[3px]!"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <button type="submit">Search</button>
+        </form>
       </nav>
 
       {loading && <div className="spinner">Loading...</div>}
-      
+
 
       {/* Displaying Searched Albums */}
       <div className="">
         <div className="flex gap-[5em] overflow-x-scroll">
           {albums?.map((album) => (
-            <div key={album.id} className="flex overflow-y-clip justify-center items-center text-white gap-[3em] h-[90vh]">
+            <div key={album.id} className="flex flex-col overflow-y-clip justify-center items-center text-white gap-[3em] px-10 h-[90vh]">
               <img className="ImageGuards" src={album.image[2].url} alt={`Cover for ${album.name}`} />
               <div>
                 <p className="text-white">{album.artists.all[0].name}</p>
@@ -91,11 +90,14 @@ export default function Anime() {
             <img className="ImageGuards" src={playlist.image[2].url} alt={playlist.name} />
             <div>
               <p className="text-white text-center">{playlist.artists.all[0].name}</p>
-              
+
               <audio controls src={playlist.downloadUrl[4].url}></audio>
             </div>
           </div>
         ))}
+      </div>
+      <div className="fixed bottom-0 right-0 bg-blur">
+        <a className="back" href="#back"><PiArrowSquareUpLight size={75} /></a>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 .pages {
-  background-image: url(/public/LatestBW.jpg);
+  background-image: url(/LatestBW.jpg);
   background-attachment: fixed;
   background-size: cover;
-  height: 1000vh;
+  min-height: auto;
+  padding-bottom: 5em;
   box-shadow: 0 0 12px 20px black;
 }
 .btn-flip {
