@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import Content from './Content'
-function Mainpage() {
+export default function Mainpage() {
     const navigate = useNavigate()
 
     return (
@@ -15,7 +15,7 @@ function Mainpage() {
             </div>
             <div className="m-3 flex">
                 <div className="buttons">
-                    <div className='text-black flex flex-col gap-2 w-[18rem]' >
+                    <div className='text-black flex flex-col gap-2 w-[18rem]'>
                         <button onClick={() => navigate('/LatestBollywood')} className="border rounded-full p-2 bg-gradient-to-r from-white to-gray-500 font-bold text-2xl" type="submit">
                             Latest Bollywood
                         </button>
@@ -33,5 +33,3 @@ function Mainpage() {
         </div>
     )
 }
-
-export default Mainpage
