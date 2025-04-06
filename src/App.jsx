@@ -3,15 +3,15 @@ import { Navigate } from 'react-router-dom'
 
 
 
-import Mainpage from './components/junctions/Mainpage';
-import LatestBollywood from './components/junctions/LatestBollywood';
-import LatestPunjabi from './components/junctions/LatestPunjabi';
-import LatestIndiPOP from './components/junctions/LatestIndiPOP';
-import TopSongs2024 from './components/junctions/TopSongs2024';
-import HaryanviSongs from './components/junctions/HaryanviSongs';
-import NewRingTones from './components/junctions/NewRingTones';
-import NewDJRemix from './components/junctions/NewDJRemix';
-import Anime from './components/junctions/Anime';
+import Mainpage from './Components/junctions/Mainpage';
+import LatestBollywood from './Components/junctions/LatestBollywood';
+import LatestPunjabi from './Components/junctions/LatestPunjabi';
+import LatestIndiPOP from './Components/junctions/LatestIndiPOP';
+import TopSongs2024 from './Components/junctions/TopSongs2024';
+import HaryanviSongs from './Components/junctions/HaryanviSongs';
+import NewRingTones from './Components/junctions/NewRingTones';
+import NewDJRemix from './Components/junctions/NewDJRemix';
+import Anime from './Components/junctions/Anime';
 import Login from './Components/Login/Login'
 
 function App() {
